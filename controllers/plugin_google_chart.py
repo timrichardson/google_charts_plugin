@@ -1,4 +1,4 @@
-__author__ = 'tim'
+
 
 def plugin_google_chart():
     """used with the .load view to create a google chart
