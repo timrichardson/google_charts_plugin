@@ -32,3 +32,6 @@ def plugin_return_data():
             ["2007",1500,800],["2008",1600,850],["2009",1800,900]]
     return dict(data=data)
 
+
+def plugin_usage_example():
+    return dict()
