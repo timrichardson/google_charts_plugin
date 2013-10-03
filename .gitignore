@@ -1,0 +1,13 @@
+*.DS_Store
+*~
+*.bak
+*.backup
+.idea/
+*.pyc
+databases/*
+! databases/.gitignore
+sessions/*
+! sessions/.gitignore
+errors/*
+! errors/.gitignore
+
