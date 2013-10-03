@@ -1,0 +1,21 @@
+
+{{extend 'layout.html'}}
+
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+{{ data_url = URL('plugin_google_chart','plugin_return_data.json',user_signature=True)}}
+<div class="span6">
+{{
+  options ={'title':'Sales vs Expenses','width':0,'height':0}
+}}
+{{=LOAD('plugin_google_chart','plugin_google_chart.load',ajax=True,
+        user_signature=True,vars={'type':'bar','data_url':data_url,
+        'options_dict':options})}}
+</div>
+
+<div class=span6">
+
+{{=LOAD('plugin_google_chart','plugin_google_chart.load',user_signature=True,ajax=True,
+    vars={'type':'column','data_url':data_url,'options_dict':options})}}
+
+</div>
