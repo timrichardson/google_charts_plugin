@@ -3,15 +3,17 @@
 def plugin_google_chart():
     """used with the .load view to create a google chart
     Because this is used in a view LOAD, parameters are passed back from the browser as vars in the URL
-    The complulsory vars include: 'type', a string defining the chart_type
+    The compulsory vars include: 'type', a string defining the chart_type
         'data_url', which is a URL of the function which returns the data to be charted
 
-    The use in the view is like this (including an example data URL
+    The use in the view is like this (including an example data URL)
 
     {{ data_url = URL('plugin_google_chart','plugin_return_data.json',user_signature=True)}}
     ...
     {{=LOAD('plugin_google_chart','plugin_google_chart.load',ajax=True,
         user_signature=True,vars={'type':'bar','data_url':data_url})}}
+
+    This plugin
     """
     chart_type = request.vars.type
     data_url = request.vars.data_url
